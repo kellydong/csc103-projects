@@ -6,8 +6,24 @@
  * and the book, please list everything.  And remember- citing a source does
  * NOT mean it is okay to COPY THAT SOURCE.  What you submit here **MUST BE
  * YOUR OWN WORK**.
- * References:
+ * References: readme.html
  *
  */
 
+#include <iostream>
+#include <string>
+using std::cin;
+using std::cout;
+using std:: string;
+
+int main()
+{
+    string name;
+    string relative;
+    cout << "Enter your name:\n";
+    cin >> name;
+    cout << "Enter a relative:\n";
+    cin >> relative;
+    cout << "Hello. My name is " << name << ". You killed my " << relative << ". Prepare to die.\n";
+}
 
