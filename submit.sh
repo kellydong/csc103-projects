@@ -16,6 +16,11 @@ if (( $? != 0 )) ; then
 	echo -e "\033[31mError:\033[0m upload failed.  Check network?"
 	exit 1
 fi
+if grep -qi 'path not found' $rcpt ; then
+	echo -e "\033[31mError:\033[0m Upload path not found."
+	echo "Double check 'postdata' contents; make sure you are on the roster."
+	exit 2
+fi
 if grep -qiE '(fail|warn)' $rcpt ; then
 	echo -e "\033[1;31mWarning:\033[0m Receipt looks wrong.  Double check postdata?"
 	exit 2
