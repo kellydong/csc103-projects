@@ -25,7 +25,7 @@ if grep -qiE '(fail|warn)' $rcpt ; then
 	echo -e "\033[1;31mWarning:\033[0m Receipt looks wrong.  Double check postdata?"
 	exit 2
 fi
-if grep -qiE 'sha1:\s+[0-9a-f]+' $rcpt ; then
+if grep -qiE 'receipt:\s+[0-9a-f]{40}' $rcpt ; then
 	echo -e "\033[32mSuccess (really!).\033[0m  See receipt in $rcpt"
 	exit 0
 fi
