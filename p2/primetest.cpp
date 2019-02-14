@@ -7,15 +7,29 @@
  * NOT mean it is okay to COPY THAT SOURCE.  What you submit here **MUST BE
  * YOUR OWN WORK**.
  * References:
- *
+ * https://www.geeksforgeeks.org/bool-data-type-in-c/
  */
 
 #include <iostream>
-using std::cin;
-using std::cout;
-using std::endl;
+using namespace std;
 
 int main()
 {
+    int num;
+    cin >> num;
+    bool prime = true;
+    if(num <= 1)
+    {
+        cout << false << endl;
+    }
+    for (int i=2;i<num;i++)
+    {
+        int check = num % i;
+        if (check == 0)
+        {
+            prime = false;
+        }
+    }
+    cout << prime << endl;
 	return 0;
 }

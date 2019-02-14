@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="852e5ef4-4362-4249-a397-e2d05c93aa83" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/postdata" beforeDir="false" afterPath="$PROJECT_DIR$/postdata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz1/quiz1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz1/quiz1.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz1/quiz1.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz1/quiz1a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz1/quiz1a.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz1/quiz1a.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/p2/primetest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/p2/primetest.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,28 +12,32 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/submit.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/postdata">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hello.cpp-rcpt.html">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/p2/primetest.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="23" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quiz1/quiz1.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p1/hello.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="16" selection-end-column="19" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -53,12 +52,12 @@
         <option value="$PROJECT_DIR$/quiz1/quiz1.cpp" />
         <option value="$PROJECT_DIR$/quiz1/quiz1a.cpp" />
         <option value="$PROJECT_DIR$/postdata" />
+        <option value="$PROJECT_DIR$/p2/primetest.cpp" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="19" />
-    <option name="y" value="62" />
+    <option name="y" value="123" />
     <option name="width" value="1400" />
     <option name="height" value="760" />
   </component>
@@ -79,6 +78,16 @@
               <item name="csc103-projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="csc103-projects" type="462c0819:PsiDirectoryNode" />
               <item name="p1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="csc103-projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc103-projects" type="462c0819:PsiDirectoryNode" />
+              <item name="p2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="csc103-projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc103-projects" type="462c0819:PsiDirectoryNode" />
+              <item name="quiz1" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -118,17 +127,19 @@
       <workItem from="1549634475122" duration="1097000" />
       <workItem from="1549636303863" duration="443000" />
       <workItem from="1549671548883" duration="205000" />
+      <workItem from="1549727408172" duration="355000" />
+      <workItem from="1550113602564" duration="2168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3555000" />
+    <option name="totallyTimeSpent" value="6078000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="19" y="62" width="1400" height="760" extended-state="0" />
+    <frame x="0" y="123" width="1400" height="760" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26067746" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26804122" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -158,10 +169,37 @@
     <entry file="file://$PROJECT_DIR$/../csc103-lectures/csc103-lab/01.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/quiz1/quiz1a.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hello.cpp-rcpt.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/postdata">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p2/readme.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/submit.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/p1/hello.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="16" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -172,29 +210,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quiz1/quiz1a.cpp">
+    <entry file="file://$PROJECT_DIR$/p2/primetest.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="420">
+          <caret line="28" column="23" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/submit.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/postdata">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hello.cpp-rcpt.html">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
