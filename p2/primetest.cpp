@@ -8,7 +8,7 @@
  * YOUR OWN WORK**.
  * References:
  * https://www.geeksforgeeks.org/bool-data-type-in-c/
- * https://www.programiz.com/cpp-programming/library-function/cmath/sqrt
+ *
  */
 
 #include <iostream>
@@ -16,10 +16,9 @@ using namespace std;
 
 int main()
 {
-    int num = 2;
-    while (num > 1)
+    int num;
+    while (cin >> num)
     {
-        cin >> num;
         int i = 2;
         bool prime = true;
         if (num <= 1)
