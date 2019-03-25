@@ -7,8 +7,8 @@
  * NOT mean it is okay to COPY THAT SOURCE.  What you submit here **MUST BE
  * YOUR OWN WORK**.
  * References:
- *
- *
+ * Gene (friend)
+ * tutorialspoint.com,cplusplus.com,
  * Finally, please indicate approximately how many hours you spent on this:
  * #hours: 40
  */
