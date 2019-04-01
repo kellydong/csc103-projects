@@ -20,7 +20,6 @@ void testFSM(string s) {
 int main() {
 	/* you can run your own tests here, but keep the loop
 	 * below, as that is used in the test script. */
-
 	// read one line at a time, and feed it through
 	// the finite state machine:
 	string input;

@@ -6,11 +6,11 @@
  * and the book, please list everything.  And remember- citing a source does
  * NOT mean it is okay to COPY THAT SOURCE.  What you submit here **MUST BE
  * YOUR OWN WORK**.
- * References:
- *
+ * References: https://www.youtube.com/watch?v=O-jZJLfXkyk
+ * readme.html
  *
  * Finally, please indicate approximately how many hours you spent on this:
- * #hours: 
+ * #hours: 5
  */
 
 #include "fsm.h"
@@ -26,6 +26,70 @@ using std::endl;
 // file for details.
 int cppfsm::updateState(int& state, char c) {
 	// TODO:  write this function.
-	return 0;
+	int oldState = state;
+    switch (state) {
+        case start:
+            if (INSET(c,iddelim))
+                state = start;
+            else if (INSET(c,ident_st))
+                state = scanid;
+            else if (c == '/')
+                state = readfs;
+            else if(INSET(c,num))
+                state = scannum;
+            else if(c =='"')
+                state = strlit;
+            break;
+        case scanid:
+            if (INSET(c,iddelim))
+                state = start;
+            else if (INSET(c,ident_st))
+                state = scanid;
+            else if (c =='/')
+                state=readfs;
+            else if(c == '"')
+                state = strlit;
+            break;
+        case readfs:
+            if (INSET(c,ident_st))
+                state = scanid;
+            else if (c == '/')
+                state = comment;
+            else if(INSET(c,num))
+                state = scannum;
+            else if(c == '"')
+                state = strlit;
+            break;
+        case comment:
+            break;
+        case strlit:
+            if (c == '\"')
+                state = start;
+            else if (c == '\\')
+                state = readesc;
+            else
+                state = strlit;
+            break;
+        case scannum:
+            if (INSET(c,iddelim))
+                state = start;
+            else if (c == '/')
+                state = readfs;
+            else if(INSET(c,num))
+                state = scannum;
+            else
+                state = error;
+            break;
+        case readesc:
+            if (INSET(c,escseq))
+                state = strlit;
+            else
+                state = error;
+            break;
+        case error:
+            break;
+    }
+    return oldState;
 }
+
 
