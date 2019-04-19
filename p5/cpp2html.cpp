@@ -7,10 +7,10 @@
  * NOT mean it is okay to COPY THAT SOURCE.  What you submit here **MUST BE
  * YOUR OWN WORK**.
  * References:
- *
+ * readme.html
  *
  * Finally, please indicate approximately how many hours you spent on this:
- * #hours: 
+ * #hours: 15
  */
 
 #include "fsm.h"
@@ -84,10 +84,92 @@ string translateHTMLReserved(char c) {
 	}
 }
 
+bool lookKeyword(string str) {
+    map<string, short>::iterator it;
+    it = hlmap.find(str);
+    if (it != hlmap.end())
+        return true;
+    return false;
+}
+
+string update(string str) {
+    int state = 0;
+    int syntaxhl = 8;
+    string newStr, input;
+    for(size_t c = 0; c < str.length(); c++) {
+        string htmlSpecChar = translateHTMLReserved(str[c]);
+        cppfsm::updateState(state, str[c]);
+        switch (state) {
+            case start:
+                if (syntaxhl == hlstrlit)
+                    newStr += hlspans[syntaxhl] + input + htmlSpecChar + spanend;
+                else if (syntaxhl != hlident)
+                    newStr += hlspans[syntaxhl] + input + spanend + htmlSpecChar;
+                else if (lookKeyword(input))
+                    newStr += hlspans[hlmap[input]] + input + spanend + htmlSpecChar;
+                else
+                    newStr += input + htmlSpecChar;
+                input.clear();
+                syntaxhl = hlident;
+                break;
+            case scanid:
+                input += htmlSpecChar;
+                break;
+            case comment:
+                syntaxhl = hlcomment;
+                input += htmlSpecChar;
+                break;
+            case strlit:
+                if (syntaxhl == hlescseq) {
+                    newStr += hlspans[syntaxhl] + input + htmlSpecChar + spanend;
+                    input.clear();
+                }
+                else
+                    input += htmlSpecChar;
+                syntaxhl = hlstrlit;
+                break;
+            case readfs:
+                if (syntaxhl == hlnumeric) {
+                    newStr += hlspans[syntaxhl] + input + spanend;
+                    input.clear();
+                }
+                input += htmlSpecChar;
+                syntaxhl = hlcomment;
+                break;
+            case scannum:
+                if(syntaxhl == hlcomment) {
+                    newStr += input;
+                    input.clear();
+                }
+                syntaxhl = hlnumeric;
+                input += htmlSpecChar;
+                break;
+            case readesc:
+                newStr += hlspans[syntaxhl] + input + spanend;
+                input.clear();
+                syntaxhl = hlescseq;
+                input += htmlSpecChar;
+                break;
+            case error:
+                if (syntaxhl != hlerror && syntaxhl != hlescseq){
+                    newStr += hlspans[syntaxhl] + input + spanend;
+                    input.clear();
+                }
+                syntaxhl = hlerror;
+                input += htmlSpecChar;
+                break;
+        }
+    }
+    return newStr;
+}
+
 int main() {
 	// TODO: write the main program.
 	// It may be helpful to break this down and write
 	// a function that processes a single line, which
 	// you repeatedly call from main().
+	string str;
+	while(getline(cin,str))
+        cout << update(str + '\n');
 	return 0;
 }
