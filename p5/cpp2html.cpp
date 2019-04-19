@@ -84,7 +84,7 @@ string translateHTMLReserved(char c) {
 	}
 }
 
-bool lookKeyword(string str) {
+bool SearchWord(string str) {
     map<string, short>::iterator it;
     it = hlmap.find(str);
     if (it != hlmap.end())
@@ -105,7 +105,7 @@ string update(string str) {
                     newStr += hlspans[syntaxhl] + input + htmlSpecChar + spanend;
                 else if (syntaxhl != hlident)
                     newStr += hlspans[syntaxhl] + input + spanend + htmlSpecChar;
-                else if (lookKeyword(input))
+                else if (SearchWord(input))
                     newStr += hlspans[hlmap[input]] + input + spanend + htmlSpecChar;
                 else
                     newStr += input + htmlSpecChar;
