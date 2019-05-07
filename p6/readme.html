@@ -286,10 +286,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!---}}-->
 <!---{{ Submission proc-->
 <h2 id="submission-procedure">Submission Procedure</h2>
-<p>Turn your assignment in <a href="https://www-cs.ccny.cuny.edu/~wes/CSC103/upload.html">here</a>. A few <strong>important notes:</strong></p>
+<p>Assuming you have the <code>postdata</code> file all set with your info,<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> just run:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1">$ <span class="bu">cd</span> ~/csc103-projects/</a>
+<a class="sourceLine" id="cb5-2" title="2">$ <span class="ex">./submit.sh</span> p6/towers.cpp</a></code></pre></div>
+<p>If you see a green message saying something about “success”, then it worked. A receipt will be stored in a file named <code>cpp2html.cpp-rcpt.html</code>.</p>
+<p><em>Note:</em> you can also use the <a href="https://www-cs.ccny.cuny.edu/~wes/CSC103/upload.html">online form</a> if that is more convenient. A few <strong>important notes:</strong></p>
 <ul>
 <li><em>Save the receipt.</em> You will need this to get your homework score back later from <a href="https://www-cs.ccny.cuny.edu/~wes/CSC103/download.html">the hw download page</a>.</li>
-<li><em>Don’t change the filename.</em> Just edit and submit the file from the repository (<code>towers.cpp</code>). If you turn a file with a different name, it will not be graded.</li>
+<li><em>Don’t change the filename.</em> Just edit and submit the file from the repository (in this case <code>towers.cpp</code>). If you turn a file with a different name, it will not be graded.</li>
 <li><em>Respect the deadline.</em> Turning in homework past the deadline will be noticed, and may lead to a zero.</li>
 </ul>
 <!---}}-->
@@ -298,5 +302,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!---
 % vim:ff=unix:textwidth=78:foldmethod=marker:foldmarker={{,}}
 -->
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>If you need more detailed instructions on setting this up, please consult the project 1 readme.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
 </body>
 </html>
