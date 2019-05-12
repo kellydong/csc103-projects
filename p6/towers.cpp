@@ -7,10 +7,10 @@
  * NOT mean it is okay to COPY THAT SOURCE.  What you submit here **MUST BE
  * YOUR OWN WORK**.
  * References:
- *
+ * Bin Mu
  *
  * Finally, please indicate approximately how many hours you spent on this:
- * #hours: 
+ * #hours: 3
  */
 
 // TODO: write the program.
@@ -20,6 +20,19 @@ using std::cout;
 using std::endl;
 #include <getopt.h> // to parse long arguments.
 #include <cstdlib> // for atoi function
+
+void tower(int numDisk, int startPeg, int endPeg){
+    //base case
+    if(numDisk < 1 || startPeg < 1 || endPeg < 1)
+        return;
+    if(numDisk == 1){
+        cout << startPeg << "  " << endPeg << "\n";
+        return;
+    }
+    tower(numDisk - 1, startPeg, 6 - startPeg - endPeg);
+    cout << startPeg << "  " << endPeg << "\n";
+    tower(numDisk - 1, 6 - startPeg - endPeg, endPeg);
+}
 
 /* Here's a skeleton main function for processing the arguments. */
 int main(int argc, char *argv[]) {
@@ -54,6 +67,7 @@ int main(int argc, char *argv[]) {
 
 	/* TODO: now that you have the options and arguments,
 	 * solve the puzzle. */
+	 tower(n,start,end);
 
 	return 0;
 }
