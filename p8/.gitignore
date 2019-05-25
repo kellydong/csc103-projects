@@ -1,0 +1,5 @@
+mset
+Makefile
+moc_mainwindow.cpp
+moc_mset.cpp
+Doxyfile
